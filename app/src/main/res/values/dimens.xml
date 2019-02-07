@@ -1,0 +1,21 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="user_registration_default_text_size">12dp</dimen>
+    <dimen name="user_registration_default_edit_text_size">20dp</dimen>
+    <dimen name="user_registration_title_text_size">30dp</dimen>
+    <dimen name="user_registration_text_view_defaut_left_margin">20dp</dimen>
+    <dimen name="user_registration_title_top_margin">40dp</dimen>
+    <dimen name="user_registration_text_view_top_margin">25dp</dimen>
+    <dimen name="user_registration_edit_text_defaut_left_margin">250dp</dimen>
+    <dimen name="user_registration_edit_text_width">240dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Per the design guidelines, navigation drawers should be between 240dp and 320dp:
+         https://developer.android.com/design/patterns/navigation-drawer.html -->
+    <dimen name="navigation_drawer_width">240dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+</resources>

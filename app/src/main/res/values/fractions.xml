@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <fraction name="ground_image_height">30%</fraction>
+    <fraction name="login_field_width">60%</fraction>
+    <fraction name="login_top_margin">6%</fraction>
+    <fraction name="sign_up_top_margin">4.5%</fraction>
+</resources>

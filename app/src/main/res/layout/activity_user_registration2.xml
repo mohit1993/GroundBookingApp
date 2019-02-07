@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserRegistrationActivity2">
+
+    <TextView
+        android:id="@+id/user_registration_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/user_registration_title_top_margin"
+        android:text="@string/user_registration_title"
+        android:textColor="#006699"
+        android:textSize="@dimen/user_registration_title_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        style="@style/UserRegistrationTextView"
+        android:id="@+id/tv_dob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dob"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="@id/et_dob"
+        app:layout_constraintTop_toBottomOf="@+id/user_registration_title" />
+
+    <EditText
+        android:id="@+id/et_dob"
+        style="@style/UserRegistrationEditText"
+        android:layout_width="@dimen/user_registration_edit_text_width"
+        android:layout_height="wrap_content"
+        android:onClick="onDobEditorClick"
+        android:hint="@string/dob"
+        android:editable="false"
+        app:layout_constraintTop_toBottomOf="@id/tv_dob"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        style="@style/UserRegistrationTextView"
+        android:id="@+id/tv_phoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/phone_number"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="@id/et_phoneNumber"
+        app:layout_constraintTop_toBottomOf="@id/et_dob"/>
+
+    <EditText
+        style="@style/UserRegistrationEditText"
+        android:id="@+id/et_phoneNumber"
+        android:layout_width="@dimen/user_registration_edit_text_width"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:hint="@string/phone_number"
+        app:layout_constraintTop_toBottomOf="@id/tv_phoneNumber"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        style="@style/UserRegistrationTextView"
+        android:id="@+id/tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="@id/et_email"
+        app:layout_constraintTop_toBottomOf="@id/et_phoneNumber"/>
+
+    <EditText
+        style="@style/UserRegistrationEditText"
+        android:id="@+id/et_email"
+        android:layout_width="@dimen/user_registration_edit_text_width"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="@string/email"
+        app:layout_constraintTop_toBottomOf="@id/tv_email"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        style="@style/UserRegistrationTextView"
+        android:id="@+id/tv_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/password"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="@id/et_password"
+        app:layout_constraintTop_toBottomOf="@id/et_email"/>
+
+    <EditText
+        style="@style/UserRegistrationEditText"
+        android:id="@+id/et_password"
+        android:layout_width="@dimen/user_registration_edit_text_width"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="@string/password"
+        app:layout_constraintTop_toBottomOf="@id/tv_password"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        style="@style/UserRegistrationTextView"
+        android:id="@+id/tv_confirmPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/confirm_password"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="@id/et_confirmPassword"
+        app:layout_constraintTop_toBottomOf="@id/et_password"/>
+
+    <EditText
+        style="@style/UserRegistrationEditText"
+        android:id="@+id/et_confirmPassword"
+        android:layout_width="@dimen/user_registration_edit_text_width"
+        android:inputType="textPassword"
+        android:layout_height="wrap_content"
+        android:hint="@string/confirm_password"
+        app:layout_constraintTop_toBottomOf="@id/tv_confirmPassword"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/dobButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/finish"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_confirmPassword"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

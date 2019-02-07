@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserRegistrationActivity1">
+
+    <TextView
+        android:id="@+id/user_registration_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/user_registration_title_top_margin"
+        android:text="@string/user_registration_title"
+        android:textColor="#006699"
+        android:textSize="@dimen/user_registration_title_text_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_firstname"
+        style="@style/UserRegistrationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/first_name"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@id/et_firstname"
+        app:layout_constraintTop_toBottomOf="@id/user_registration_title" />
+
+    <EditText
+        android:id="@+id/et_firstname"
+        style="@style/UserRegistrationEditText"
+        android:layout_width="@dimen/user_registration_edit_text_width"
+        android:layout_height="wrap_content"
+        android:hint="@string/first_name"
+        android:onClick="onEditFieldClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_firstname" />
+
+    <TextView
+        android:id="@+id/tv_middlename"
+        style="@style/UserRegistrationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/middle_name"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@id/et_firstname"
+        app:layout_constraintTop_toBottomOf="@id/et_firstname" />
+
+    <EditText
+        android:id="@+id/et_middlename"
+        style="@style/UserRegistrationEditText"
+        android:layout_width="@dimen/user_registration_edit_text_width"
+        android:layout_height="wrap_content"
+        android:hint="@string/middle_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_middlename"
+         />
+
+    <TextView
+        android:id="@+id/tv_lastname"
+        style="@style/UserRegistrationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/last_name"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="@id/et_lastname"
+        app:layout_constraintTop_toBottomOf="@id/et_middlename" />
+
+    <EditText
+        android:id="@+id/et_lastname"
+        style="@style/UserRegistrationEditText"
+        android:layout_width="@dimen/user_registration_edit_text_width"
+        android:layout_height="wrap_content"
+        android:hint="@string/last_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_lastname"
+        />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_lastname">
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Female" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onNextButtoClick"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+</android.support.constraint.ConstraintLayout>
