@@ -22,6 +22,8 @@ import android.widget.TextView;
 
 public class UserLoginActivity extends AppCompatActivity {
 
+    private EditText mPhoneOrEmail, mPass;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,8 +33,8 @@ public class UserLoginActivity extends AppCompatActivity {
 
     public void intView(){
         ImageView image_ground = findViewById(R.id.groundImage);
-        EditText text_user_name = findViewById(R.id.user_name);
-        EditText text_pass = findViewById(R.id.password);
+        mPhoneOrEmail = findViewById(R.id.user_name);
+        mPass = findViewById(R.id.password);
         TextView text_view_forgot_pass = findViewById(R.id.forgot_password);
         Button login = findViewById(R.id.login);
         TextView text_or = findViewById(R.id.text_or);
@@ -50,16 +52,16 @@ public class UserLoginActivity extends AppCompatActivity {
                 R.fraction.ground_image_height);
         image_ground.setLayoutParams(lp);
 
-        lp = (ConstraintLayout.LayoutParams) text_user_name.getLayoutParams();
+        lp = (ConstraintLayout.LayoutParams) mPhoneOrEmail.getLayoutParams();
         lp.width = editorWidth;
 
         lp.setMargins(0,topMargin,0,0);
-        text_user_name.setLayoutParams(lp);
+        mPhoneOrEmail.setLayoutParams(lp);
 
-        lp = (ConstraintLayout.LayoutParams) text_pass.getLayoutParams();
+        lp = (ConstraintLayout.LayoutParams) mPass.getLayoutParams();
         lp.width = editorWidth;
         lp.setMargins(0,topMargin/2,0,0);
-        text_pass.setLayoutParams(lp);
+        mPass.setLayoutParams(lp);
 
         lp = (ConstraintLayout.LayoutParams) text_view_forgot_pass.getLayoutParams();
         lp.setMargins(0,topMargin/2,0,0);
@@ -85,7 +87,11 @@ public class UserLoginActivity extends AppCompatActivity {
     }
 
     public void loginButtonClick(View view) {
-        Intent i = new Intent(this, UserHomeActivity.class);
-        startActivity(i);
+        String phoneOrEmail = mPhoneOrEmail.getText().toString();
+        String pass = mPass.getText().toString();
+        String type = "login";
+
+        ValidateUser validateUser = new ValidateUser(this);
+        validateUser.execute(type, phoneOrEmail, pass);
     }
 }

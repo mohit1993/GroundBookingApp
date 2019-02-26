@@ -2,6 +2,7 @@ package app.prajeet.com.groundbooking;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -29,7 +30,7 @@ public class ValidateUser extends AsyncTask<String,String,String> {
     protected String doInBackground(String... params) {
         Log.d("Mohit","doInBackground");
         String type = params[0];
-        String login_url = "http://192.168.0.103:80/login.php";
+        String login_url = "http://192.168.0.103/login.php";
         if(type.equals("login")) {
             try {
                 String phoneOrEmail = params[1];
@@ -96,8 +97,15 @@ public class ValidateUser extends AsyncTask<String,String,String> {
     @Override
     protected void onPostExecute(String  result) {
         Log.d("Mohit","PostExecute");
-        alertDialog.setMessage(result);
-        alertDialog.show();
+        if(result.equals("1")) {
+            Intent i = new Intent(context, UserHomeActivity.class);
+            context.startActivity(i);
+        } else {
+            result = "Incorrect ID or Password";
+            alertDialog.setMessage(result);
+            alertDialog.show();
+        }
+
     }
 
     /**
