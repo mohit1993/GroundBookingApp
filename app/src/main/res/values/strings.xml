@@ -30,7 +30,28 @@
     <string name="title_activity_test">test</string>
 
 
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Welcome</string>
+    <string name="nav_header_subtitle">Mohit</string>
     <string name="nav_header_desc">Navigation header</string>
+    <string name="ground1">Shiva Ji stadium</string>
+    <string name="ground2">Subbu Stadium</string>
+    <string name="ground3">Tal Katora stadium</string>
+    <string name="ground4">Pratibha stadium</string>
+    <string name="groundRent1">300</string>
+    <string name="groundRent2">3500</string>
+    <string name="groundRent3">3300</string>
+    <string name="groundRent4">10000</string>
+    <string name="groundDistance1">1Km</string>
+    <string name="groundDistance2">2Km</string>
+    <string name="groundDistance3">3KM</string>
+    <string name="groundDistance4">4KM</string>
+    <string name="groundCity1">Mandi</string>
+    <string name="groundCity2">Sekhpura</string>
+    <string name="groundCity3">Ghaziabaad</string>
+    <string name="groundCity4">Kotdwar</string>
+    <string name="book">Book</string>
+    <string name="title_activity_add_ground">AddGroundActivity</string>
+    <string name="new_ground_image_des">Click Image or Choose from gallery</string>
+
+
 </resources>
